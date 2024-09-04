@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class PolindromeCheker {
+	public static void check(String s) {
+		int i=0,j=s.length()-1,k=0;
+		while(i<=j){
+			if(s.charAt(i)==s.charAt(j)){
+				i++;
+				j--;
+			}
+			else{
+				k+=1;
+				break;
+			}
+		}
+		if(k==0){
+			System.out.println("polindrome");
+		}
+		else{
+			System.out.println("not polindrome");
+		}
+	}
+	public static void main(String[] args){
+		System.out.print("Enter strimg:");
+		Scanner sc=new Scanner(System.in);
+		String s=sc.nextLine();
+		check(s);
+	}
+}
